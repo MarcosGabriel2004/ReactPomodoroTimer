@@ -1,22 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Timer from './components/Timer.js';
+import Title from './components/Title.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Title></Title>
+
+        <Timer></Timer>
+
+        {
+          /*
+            Indicador de trabalho/descanso
+            Relógio
+            Botão de início/pausa | Botão de reset
+            Botão de pular período de trabalho/descanso
+
+            Lista de ciclos
+          */
+        }
       </header>
     </div>
   );
