@@ -1,26 +1,18 @@
-import './App.css';
-import Timer from './components/Timer.js';
-import Title from './components/Title.js';
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { MainContext } from "./contexts/MainContext";
+import Config from "./pages/Config";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Title></Title>
-
-        <Timer></Timer>
-
-        {
-          /*
-            Indicador de trabalho/descanso
-            Relógio
-            Botão de início/pausa | Botão de reset
-            Botão de pular período de trabalho/descanso
-
-            Lista de ciclos
-          */
-        }
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element = { <Home /> } />
+          <Route path="/config" element = { <Config /> } />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
